@@ -11,3 +11,9 @@
  @include reset();
  font-family: 'Libre Baskerville', serif;
 }
+
+@include sm-block {
+ body {
+  overflow-x: hidden;
+ }
+}
