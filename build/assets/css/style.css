@@ -20,12 +20,10 @@ header .wrapper .navbar {
     align-items: center;
     min-height: 8vh;
     background: #FEDA51;
-    color: #000000;
-    font-family: 'Montserrat';
+    font-family: 'Roboto', sans-serif;
 }
 
 header .wrapper .navbar .logo {
-    color: #e2e2e2;
     text-transform: uppercase;
     letter-spacing: 5px;
 }
@@ -41,10 +39,16 @@ header .wrapper .navbar .nav-links {
 
 header .wrapper .navbar .nav-links li {
     list-style: none;
+    border: 1px solid #000;
+    background-color: #fff;
+    width: 164px;
+    text-align: center;
+    text-align: initial;
+    margin: 1%;
+    height: 57px;
 }
 
 header .wrapper .navbar .nav-links a {
-    color: #e2e2e2;
     text-decoration: none;
     letter-spacing: 3px;
     font-size: bold;
@@ -54,7 +58,7 @@ header .wrapper .navbar .nav-links a {
 header .wrapper .navbar .burger div {
     width: 25px;
     height: 2px;
-    background: #fff;
+    background: #000000;
     margin: 5px;
 }
 
@@ -96,10 +100,6 @@ header .wrapper .navbar .nav-active {
         -webkit-transform: translateX(0px);
         transform: translateX(0px);
     }
-}
-
-* {
-    font-family: 'Libre Baskerville', serif;
 }
 
 * body,
