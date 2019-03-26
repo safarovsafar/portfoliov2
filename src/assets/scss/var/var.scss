@@ -1,0 +1,78 @@
+@mixin cover-background($img-uri) {
+    background: url($img-uri) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$img-uri}', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$img-uri}', sizingMethod='scale')"
+}
+
+// @include cover-background('path/to/img.jpg');
+// Define vertical, horizontal, or both position
+@mixin center($position) {
+    position: absolute;
+
+    @if $position=='vertical' {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    @else if $position=='horizontal' {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translate(-50%);
+    }
+
+    @else if $position=='both' {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+// // Using the mixin
+// .foo {
+//     @include center(both);
+// }
+// .foo-parent {
+//     position: relative;
+// }
+@mixin gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+
+    @if $orientation=='vertical' {
+        background: -webkit-linear-gradient(top, $start-color, $end-color);
+        background: linear-gradient(to bottom, $start-color, $end-color);
+    }
+
+    @else if $orientation=='horizontal' {
+        background: -webkit-linear-gradient(left, $start-color, $end-color);
+        background: linear-gradient(to right, $start-color, $end-color);
+    }
+
+    @else {
+        background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+        background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+}
+
+// .gradient {
+//     @include gradient(#07c, #06f, vertical);
+// }
+
+
+@mixin small {
+    @media only screen and (max-width: 766px) {
+        @content;
+    }
+}
+
+// colores
+$color: #8f8f8f;
+$color2: #e8f380;

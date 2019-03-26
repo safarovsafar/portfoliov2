@@ -1,0 +1,13 @@
+@import 'smart-grid';
+@import './var/var';
+@import './button/button.scss';
+@import './effects/effects';
+@import './footer/footer';
+@import './header/header';
+@import './section/section';
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Roboto|Source+Sans+Pro');
+
+* {
+ @include reset();
+ font-family: 'Libre Baskerville', serif;
+}
