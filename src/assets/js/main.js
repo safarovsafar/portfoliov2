@@ -1,20 +1,19 @@
-const navSlide = function () {
- const burger = document.querySelector('.burger');
- const nav = document.querySelector('.nav-links');
- const navLinks = document.querySelectorAll('.nav-links li');
- burger.addEventListener('click', () => {
-     // Toggle now
-     nav.classList.toggle('nav-active');
- });
+$(document).ready(function() {
 
- //Animate links
- navLinks.forEach((link, index) => {
-     if (link.style.animation) {
-         link.style.animation = '';
-     } else {
-         link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 1.5}s`;
-     }
- });
-};
+    function toggleSidebar() {
+      $(".button").toggleClass("active");
+      $("main").toggleClass("move-to-left");
+      $(".sidebar-item").toggleClass("active");
+    }
 
-navSlide();
+    $(".button").on("click tap", function() {
+      toggleSidebar();
+    });
+
+    $(document).keyup(function(e) {
+      if (e.keyCode === 27) {
+        toggleSidebar();
+      }
+    });
+
+  });
