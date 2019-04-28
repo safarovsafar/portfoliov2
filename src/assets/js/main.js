@@ -1,19 +1,18 @@
-$(document).ready(function() {
+const toggler = document.querySelector(".menu__toggler");
+const menu = document.querySelector(".menu");
+const close = document.querySelector('.wrapper');
 
-    function toggleSidebar() {
-      $(".button").toggleClass("active");
-      $("main").toggleClass("move-to-left");
-      $(".sidebar-item").toggleClass("active");
-    }
+toggler.addEventListener("click", () => {
+  toggler.classList.toggle("active");
+  menu.classList.toggle("active");
+  close.classList.toggle(toggler);
+});
 
-    $(".button").on("click tap", function() {
-      toggleSidebar();
-    });
+const myLazyLoad = new LazyLoad({
+  elements_selector: ".lazyload"
+});
 
-    $(document).keyup(function(e) {
-      if (e.keyCode === 27) {
-        toggleSidebar();
-      }
-    });
+AOS.init({
+  duration: 1500
+});
 
-  });

@@ -11,52 +11,44 @@
 </head>
 
 <body>
- <!---Header--->
- <header>
+ <header class="header">
+  <div class="header__navbar">
+   <div class="header__nav">
+    <div class="menu">
+     <p class="section #1"><a data-aos="fade-in" data-scroll href="#aboutme">About me</a></p><br>
+     <p class="section #2"><a data-aos="fade-in" data-scroll href="#Portfolio">Portfolio</a></p><br>
+     <p class="section #3"><a data-scroll href="#Contacts">Contacts</a></p>
+     <p class="section #4"><a data-scroll href="#Blog">Blog</a></p>
+    </div>
+    <div class="menu__toggler"><span></span></div>
+   </div>
+   <div class="logo"><img class="lazyload logo" data-src="assets/img/logo.png"></div>
+  </div>
+  <div class="header__items-middle" data-aos="fade-in">
+   <div class="img"><img class="lazyload" data-src="assets/img/header.png" alt=""></div>
+ </header>
+ <section>
   <div class="wrapper">
-   <div class="nav-right visible-xs">
-    <div class="button" id="btn">
-     <div class="bar top"></div>
-     <div class="bar middle"></div>
-     <div class="bar bottom"></div>
+   <div class="wrapper__aboutme" id='aboutme'>
+    <div class="row">
+     <div class="item">
+      <h2 class="h2">About me</h2>
+      <p class="text">Hello, I’m Safar 18 years old Full-stack junior developer. I’m from Termiz Surkhandarya,
+       Uzbekistan. I have one year full experience in front-end. I have started to learn how to code at age of 16. I
+       know how to design sites on Adobe XD. Most of my projects are in GitHub. I’m go getter, if I sat a goal, I will
+       achieve it. If you have a project, connect with you, I’m sure that I can help you.</p>
+     </div>
+     <div class="item">
+      <img class="lazyload" data-src="assets/img/2.png" alt="">
+     </div>
     </div>
    </div>
-   <main>
-    <nav>
-     <div class="nav-right hidden-xs">
-      <div class="button" id="btn">
-       <div class="bar top"></div>
-       <div class="bar middle"></div>
-       <div class="bar bottom"></div>
-      </div>
-     </div>
-     <!-- nav-right -->
-    </nav>
-
-    <a href="https://codepen.io/tonkec/" class="ua" target="_blank">
-     <i class="fa fa-user"></i>
-    </a>
-   </main>
-
-   <div class="sidebar">
-    <ul class="sidebar-list">
-     <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 1</a></li>
-     <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 2</a></li>
-     <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 3</a></li>
-     <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 4</a></li>
-    </ul>
-   </div>
   </div>
- </header>
- <!---Header--->
-
- <!---Section--->
- <section></section>
- <!---Section--->
-
- <!---Footer--->
+ </section>
  <footer></footer>
- <!---Footer--->
+ <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.6/dist/lazyload.min.js"></script>
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
  <script src="assets/js/main.js"></script>
 </body>
 

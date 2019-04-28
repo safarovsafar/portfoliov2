@@ -5,14 +5,16 @@
 @import './footer/footer';
 @import './header/header';
 @import './section/section';
-@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Roboto|Source+Sans+Pro');
+
+@font-face {
+ font-family: 'Avenir';
+ src: url('../fonts/AvenirLTStd-Black.otf'),
+  url('../fonts/AvenirLTStd-Book.otf'),
+  url('../fonts/AvenirLTStd-Roman.otf')
+}
 
 * {
  @include reset();
-}
-
-@include sm-block {
- body {
-  overflow-x: hidden;
- }
+ font-family: 'Avenir-book';
+ font-weight: 200;
 }
